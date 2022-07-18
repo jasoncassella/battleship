@@ -24,7 +24,6 @@ class Ship {
 
 class GameBoard {
   constructor() {
-    this.hitLocations = [];
     this.missedLocations = [];
   }
   receiveAttack(x, y) {

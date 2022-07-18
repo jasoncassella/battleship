@@ -3,28 +3,34 @@ const gameBoard = document.querySelector('#gameBoard');
 class Ship {
   constructor(length) {
     this.length = length;
-    this.hitLocation = [];
+    this.hitLocations = [];
     this.sunkStatus = false;
   }
 
   hit(number) {
-    this.hitLocation.push(number);
+    if (this.length > 0) {
+
+      this.hitLocations.push(number);
+    }
   }
 
   isSunk() {
-    if (this.length === this.hitLocation.length) {
+    if (this.length === this.hitLocations.length) {
       return true;
     }
     else return false;
-
   }
 }
 
+class GameBoard {
+  constructor() {
+    this.hitLocations = [];
+    this.missedLocations = [];
+  }
+  receiveAttack(x, y) {
 
-
-// class GameBoard {
-//   // call ship function to place ships at specific coordinates
-// }
+  }
+}
 
 // const board = new GameBoard();
 

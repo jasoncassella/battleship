@@ -7,10 +7,10 @@ class Ship {
     this.sunkStatus = false;
   }
 
-  hit(number) {
+  hit(x, y) {
     if (this.length > 0) {
 
-      this.hitLocations.push(number);
+      this.hitLocations.push({ x, y });
     }
   }
 
@@ -46,10 +46,12 @@ class GameBoard {
 
 let carrier = new Ship(5);
 
-carrier.hit(1);
-carrier.hit(2);
-carrier.hit(3);
-carrier.hit(4);
-carrier.hit(5);
+carrier.hit(1, 1);
+carrier.hit(2, 2);
+carrier.hit(3, 3);
+carrier.hit(4, 4);
+carrier.hit(5, 5);
+
+console.log(carrier.hitLocations);
 
 console.log(carrier.isSunk());

@@ -1,26 +1,13 @@
 const gameBoard = document.querySelector('#gameBoard');
 
+class GameBoard {
+  // call ship function to place ships at specific coordinates
 
-class Ship {
-  constructor(length) {
-    this.length = length;
-    this.hitLocations = [];
-    this.hasSunk = false;
-  }
-
-  hit(number) {
-    this.hitLocations.push(number);
-  }
-
-  isSunk() {
-    if (this.length === this.hitLocations.length) {
-      this.hasSunk === true;
-      return true;
-    }
-    else return false;
-  }
 
 }
+
+const board = new GameBoard();
+
 
 function createBoard() {
   for (i = 0; i < 64; i++) {

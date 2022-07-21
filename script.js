@@ -32,12 +32,12 @@ class GameBoard {
   }
 }
 
-const board = new GameBoard({
-  player: 'player-1',
-  carrier: [1, 2, 3, 4, 5]
-});
+// const board = new GameBoard({
+//   player: 'player-1',
+//   carrier: [{1:1}]
+// });
 
-console.log(board.shipLocations.carrier);
+// console.log(board.shipLocations.carrier);
 
 
 // function createBoard() {

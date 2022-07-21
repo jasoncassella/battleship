@@ -8,10 +8,8 @@ class Ship {
   }
 
   hit(x, y) {
-    if (this.length > 0) {
 
-      this.hitLocations.push({ x, y });
-    }
+    this.hitLocations.push({ x, y });
   }
 
   isSunk() {

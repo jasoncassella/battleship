@@ -23,7 +23,8 @@ class Ship {
 }
 
 class GameBoard {
-  constructor() {
+  constructor(shipLocations) {
+    this.shipLocations = shipLocations;
     this.missedLocations = [];
   }
   receiveAttack(x, y) {
@@ -31,7 +32,12 @@ class GameBoard {
   }
 }
 
-// const board = new GameBoard();
+const board = new GameBoard({
+  player: 'player-1',
+  carrier: [1, 2, 3, 4, 5]
+});
+
+console.log(board.shipLocations.carrier);
 
 
 // function createBoard() {
